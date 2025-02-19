@@ -121,39 +121,6 @@ src/
 - **Server Errors**: Returns a 500 status code for unexpected issues.
 
 
-## Development
-
-- Run the application in development mode with hot-reloading:
-  ```bash
-  npm run dev
-  ```
-
-
-## Dependencies
-
-- **axios**: For HTTP requests
-- **express**: Web server framework
-- **winston**: Logging library
-
-
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. Push to your forked repository:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Create a pull request.
-
-
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
