@@ -1,0 +1,67 @@
+{
+  "data": {
+    "date": {
+      "created_at": "2025-02-19",
+      "updated_at": "2025-02-19"
+    },
+    "descriptions": {
+      "app_name": "API Rate Limiter Monitor",
+      "app_description": "Tracks API usage against rate limits and flags potential throttling risks.",
+      "app_logo": "https://example.com/app_logo.png",
+      "app_url": "https://sample-telex-api-rate-limiter-monitor.onrender.com/",
+      "background_color": "#ffffff"
+    },
+    "integration_category": "Monitoring & Logging",
+    "integration_type": "interval",
+    "is_active": false,
+    "output": [
+      {
+        "label": "output_channel_1",
+        "value": true
+      },
+      {
+        "label": "output_channel_2",
+        "value": false
+      }
+    ],
+    "key_features": [
+      "Monitors API usage.",
+      "Flags potential throttling risks.",
+      "Provides alerts when approaching rate limits."
+    ],
+    "permissions": {
+      "monitoring_user": {
+        "always_online": true,
+        "display_name": "API Rate Limiter Monitor"
+      }
+    },
+    "settings": [
+      {
+        "label": "API Endpoint",
+        "type": "text",
+        "required": true,
+        "default": "https://api.example.com/usage"
+      },
+      {
+        "label": "API Key",
+        "type": "text",
+        "required": true,
+        "default": "your-api-key"
+      },
+      {
+        "label": "Rate Limit",
+        "type": "number",
+        "required": true,
+        "default": 1000
+      },
+      {
+        "label": "Interval",
+        "type": "text",
+        "required": true,
+        "default": "* * * * *"
+      }
+    ],
+    "tick_url": "https://sample-telex-api-rate-limiter-monitor.onrender.com/tick",
+    "target_url": ""
+  }
+}
