@@ -797,3 +797,19 @@
 {"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:21:20.933Z"}
 {"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:21:20.936Z"}
 {"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:21:20.944Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:22:23.004Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:22:23.008Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:22:23.019Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:29:11.401Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:29:11.403Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:29:11.411Z"}
+{"channel_id":"01951ed6-732a-7226-af9d-63b80f834681","level":"info","message":"Received request body:","return_url":"https://ping.telex.im/v1/webhooks/01951ed6-732a-7226-af9d-63b80f834681","settings":[{"default":"https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd","label":"API Endpoint","type":"text"},{"default":"pub_706060c6414aff971b786a08457c7d744cfc1","label":"API Key","type":"text"},{"default":1000,"label":"Rate Limit","type":"number"}],"timestamp":"2025-02-20T11:29:40.821Z"}
+{"level":"info","message":"API Endpoint: https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd","timestamp":"2025-02-20T11:29:40.822Z"}
+{"level":"info","message":"Rate Limit: 1000","timestamp":"2025-02-20T11:29:40.822Z"}
+{"level":"info","message":"Fetching API usage from: https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd","timestamp":"2025-02-20T11:29:40.823Z"}
+{"level":"error","message":"Error fetching API usage: Invalid response format: usage=undefined, limit=undefined","stack":"Error: Invalid response format: usage=undefined, limit=undefined\n    at fetchApiUsage (C:\\Users\\44741\\Desktop\\HNG12\\Api-rate-limiter-monitor\\src\\service\\apiService.js:12:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async processTick (C:\\Users\\44741\\Desktop\\HNG12\\Api-rate-limiter-monitor\\src\\controllers\\tickController.js:35:25)","timestamp":"2025-02-20T11:29:41.424Z"}
+{"level":"error","message":"Error fetching API usage: Failed to fetch API usage","timestamp":"2025-02-20T11:29:41.425Z"}
+{"level":"info","message":"Telex fallback response: details is not an allowed value","status":"error","status_code":400,"timestamp":"2025-02-20T11:29:41.643Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:30:10.197Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:30:10.201Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:30:10.213Z"}

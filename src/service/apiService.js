@@ -1,44 +1,20 @@
 const axios = require('axios');
-const logger = require('../utils/logger');
 
-const fetchApiUsage = async (apiEndpoint) => {
+const fetchApiUsage = async (endpoint) => {
   try {
-    logger.info(`Fetching API usage from: ${apiEndpoint}`);
-    const response = await axios.get(apiEndpoint);
+    const response = await axios.get(endpoint);
 
-    // Check if the API response contains the expected data
-    const { usage, limit } = response.data;
-    if (typeof usage !== 'number' || typeof limit !== 'number') {
-      throw new Error(
-        `Invalid response format: usage=${usage}, limit=${limit}`
-      );
-    }
+    console.log('Full Response Headers:', response.headers);
 
-    return { usage, limit, headers: response.headers };
+    const limit = parseInt(response.headers['x_rate_limit_limit'], 10) || 1000;
+    const remaining =
+      parseInt(response.headers['x_rate_limit_remaining'], 10) || limit;
+
+    const usage = limit - remaining; // Calculate usage from remaining
+
+    return { usage, limit };
   } catch (error) {
-    const status = error.response?.status;
-    const errorData = error.response?.data;
-
-    // Specific handling for "RateLimitExceeded" error
-    if (status === 429 || errorData?.results?.code === 'RateLimitExceeded') {
-      logger.error('Rate limit exceeded:', {
-        message: errorData?.results?.message || error.message,
-        documentation: errorData?.results?.documentation || 'N/A',
-      });
-
-      throw new Error(
-        `Rate limit exceeded. Please try again later. Documentation: ${errorData?.results?.documentation}`
-      );
-    }
-
-    // General error handling
-    logger.error('Error fetching API usage:', {
-      message: error.message,
-      status,
-      errorData,
-      stack: error.stack,
-    });
-
+    console.error('Error fetching API usage:', error.message);
     throw new Error('Failed to fetch API usage');
   }
 };
