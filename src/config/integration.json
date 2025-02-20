@@ -7,8 +7,8 @@
     "descriptions": {
       "app_name": "API Rate Limiter Monitor",
       "app_description": "Tracks API usage against rate limits and flags potential throttling risks.",
-      "app_logo": "https://example.com/app_logo.png",
-      "app_url": "https://sample-telex-api-rate-limiter-monitor.onrender.com/",
+      "app_logo": "https://chisellabs.com/glossary/wp-content/uploads/2021/06/What-is-an-API.png",
+      "app_url": "https://api-rate-limiter-monitor.onrender.com/",
       "background_color": "#ffffff"
     },
     "integration_category": "Monitoring & Logging",
@@ -61,7 +61,7 @@
         "default": "* * * * *"
       }
     ],
-    "tick_url": "https://sample-telex-api-rate-limiter-monitor.onrender.com/tick",
+    "tick_url": "https://api-rate-limiter-monitor.onrender.com/tick",
     "target_url": ""
   }
 }

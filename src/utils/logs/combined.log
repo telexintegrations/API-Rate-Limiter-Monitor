@@ -791,3 +791,9 @@
 {"documentation":"N/A","level":"error","message":"Rate limit exceeded: Rate limit exceeded. Please try your request again later. For further details, please refer to our documentation at: https://newsdata.io/documentation/#rate-limit","timestamp":"2025-02-19T19:48:09.017Z"}
 {"level":"error","message":"Error fetching API usage: Rate limit exceeded. Please try again later. Documentation: undefined","timestamp":"2025-02-19T19:48:09.018Z"}
 {"level":"info","message":"Telex fallback response: details is not an allowed value","status":"error","status_code":400,"timestamp":"2025-02-19T19:48:09.215Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:21:11.717Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:21:11.728Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:21:11.739Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:21:20.933Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:21:20.936Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:21:20.944Z"}
