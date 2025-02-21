@@ -74,7 +74,7 @@ The **API Rate Limiter Monitor** is a Node.js application built using Express.js
 2. The server will be available at `http://localhost:3000` by default.
 
 3. To test the application:
-   - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to send a POST request to the `/process-tick` endpoint.
+   - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to send a POST request to the `/tick` endpoint.
    - Example request body:
      ```json
      {
