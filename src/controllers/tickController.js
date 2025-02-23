@@ -1,15 +1,37 @@
+const fs = require('fs');
+const path = require('path');
 const axios = require('axios');
 const { fetchApiUsage } = require('../service/apiService');
 const logger = require('../utils/logger');
 
+// Load default settings from integration.json
+const defaultSettingsPath = path.join(__dirname, '../config/integration.json');
+const defaultIntegrationConfig = JSON.parse(
+  fs.readFileSync(defaultSettingsPath, 'utf-8')
+);
+
 const processTick = async (req, res) => {
   try {
-    const { channel_id, return_url, settings } = req.body;
+    const { channel_id, return_url, settings: incomingSettings } = req.body;
 
     logger.info('Received request body:', req.body);
 
-    const apiEndpointSetting = settings.find((s) => s.label === 'API Endpoint');
-    const rateLimitSetting = settings.find((s) => s.label === 'Rate Limit');
+    // Resolve settings: prefer incoming settings or fallback to defaults
+    const resolvedSettings =
+      incomingSettings || defaultIntegrationConfig.data.settings;
+
+    if (!Array.isArray(resolvedSettings)) {
+      return res.status(400).json({
+        error: 'Invalid or missing settings. It must be an array.',
+      });
+    }
+
+    const apiEndpointSetting = resolvedSettings.find(
+      (s) => s.label === 'API Endpoint'
+    );
+    const rateLimitSetting = resolvedSettings.find(
+      (s) => s.label === 'Rate Limit'
+    );
 
     const apiEndpoint = apiEndpointSetting?.default || null;
     const rateLimit = parseInt(rateLimitSetting?.default, 10) || null;
