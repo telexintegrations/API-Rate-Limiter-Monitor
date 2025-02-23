@@ -813,3 +813,13 @@
 {"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:30:10.197Z"}
 {"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:30:10.201Z"}
 {"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:30:10.213Z"}
+{"level":"info","message":"Logger is working!","timestamp":"2025-02-20T11:30:11.832Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-02-20T11:30:11.834Z"}
+{"level":"info","message":"API Rate Limiter Monitor running on port 3000","timestamp":"2025-02-20T11:30:11.842Z"}
+{"channel_id":"01951ed6-732a-7226-af9d-63b80f834681","level":"info","message":"Received request body:","return_url":"https://ping.telex.im/v1/webhooks/01951ed6-732a-7226-af9d-63b80f834681","settings":[{"default":"https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd","label":"API Endpoint","type":"text"},{"default":"pub_706060c6414aff971b786a08457c7d744cfc1","label":"API Key","type":"text"},{"default":1000,"label":"Rate Limit","type":"number"}],"timestamp":"2025-02-20T11:30:16.424Z"}
+{"level":"info","message":"API Endpoint: https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd","timestamp":"2025-02-20T11:30:16.425Z"}
+{"level":"info","message":"Rate Limit: 1000","timestamp":"2025-02-20T11:30:16.426Z"}
+{"level":"info","limit":1000,"message":"Fetched API usage:","timestamp":"2025-02-20T11:30:18.194Z","usage":984}
+{"level":"info","message":"Remaining usage: 16","timestamp":"2025-02-20T11:30:18.195Z"}
+{"event_name":"API Rate Limit Check","level":"info","message":"Prepared payload to send to Telex: API Usage: 984/1000. Remaining: 16. Warning: Approaching rate limit!","status":"error","timestamp":"2025-02-20T11:30:18.196Z","username":"API Rate Limiter Monitor"}
+{"level":"info","message":"Telex response: request received","status":"success","status_code":202,"task_id":"0db49cad-69f8-431b-8e36-44ec63b57256","timestamp":"2025-02-20T11:30:18.370Z"}

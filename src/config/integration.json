@@ -40,13 +40,13 @@
         "label": "API Endpoint",
         "type": "text",
         "required": true,
-        "default": "https://api.example.com/usage"
+        "default": "https://newsdata.io/api/1/latest?apikey=pub_706060c6414aff971b786a08457c7d744cfc1&category=politics&country=bd"
       },
       {
         "label": "API Key",
         "type": "text",
         "required": true,
-        "default": "your-api-key"
+        "default": "pub_706060c6414aff971b786a08457c7d744cfc1"
       },
       {
         "label": "Rate Limit",

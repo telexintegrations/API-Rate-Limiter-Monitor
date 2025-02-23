@@ -71,25 +71,15 @@ The **API Rate Limiter Monitor** is a Node.js application built using Express.js
    npm start
    ```
 
-2. The server will be available at `http://localhost:3000` by default.
+2. The server will be available at `http://localhost:3000` by default locally and `https://api-rate-limiter-monitor.onrender.com/` hosted.
 
 3. To test the application:
-   - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to send a POST request to the `/process-tick` endpoint.
+   - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to send a POST request to the `/tick` endpoint.
    - Example request body:
      ```json
      {
        "channel_id": "your-channel-id",
        "return_url": "https://telex.example.com/webhook",
-       "settings": [
-         {
-           "label": "API Endpoint",
-           "default": "https://example.com/api/usage"
-         },
-         {
-           "label": "Rate Limit",
-           "default": 1000
-         }
-       ]
      }
      ```
 
